@@ -1,0 +1,28 @@
+.table_box {
+  color: black;
+  border: 1px solid black;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.table_box th {
+  background-color: pink;
+  outline: black;
+}
+.container_to {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.responsive-img {
+  width: 45%;
+  height: auto;
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  .responsive-img {
+    width: 100%;
+  }
+}

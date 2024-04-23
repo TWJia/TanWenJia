@@ -1,0 +1,20 @@
+.achievements-container {
+  max-width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .achievements-container {
+    padding: 0 10px;
+  }
+
+  .rct-chrono .rct-card {
+    width: 120px;
+    height: 60px;
+  }
+
+  .rct-chrono .rct-item .rct-title {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,310 @@
+/* html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  margin: 0;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  margin-left: auto;
+  border-bottom: none;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav_left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex: 3.5;
+  justify-content: center;
+  cursor: pointer;
+  border-bottom: none;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: 32px;
+}
+
+.nav-logo {
+  height: 35px;
+  margin-left: 32px;
+  justify-self: start;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+
+.nav-links {
+  color: black;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 550;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+}
+
+.nav-links:hover {
+  transform: translateY(-3px);
+  transition: transform 250ms;
+  color: palevioletred;
+}
+.icon:hover {
+  transform: translateY(-3px);
+  transition: transform 250ms;
+  color: black !important;
+}
+.active {
+  background-color: palevioletred;
+}
+.menu {
+  display: none;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+}
+.ul {
+  display: flex;
+}
+ul li {
+  list-style: none;
+}
+@media (max-width: 500px) {
+  .menu {
+    display: flex;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: start;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+  nav ul.open {
+    display: flex;
+  }
+  ul li {
+    width: 100%;
+    text-align: center;
+  }
+}
+.menu-icon {
+  display: none;
+  color: #fffaeb;
+}
+.menu-icon svg {
+  font-size: 2rem;
+  fill: rgb(38, 38, 38) !important;
+}
+
+.mainDashboard {
+  background-color: rgba(218, 44, 0, 0.902);
+  height: 550px;
+  padding: 50px;
+}
+.mainwording {
+  font-family: "Gill Sans", sans-serif;
+  letter-spacing: 1.1px;
+  font-size: 70px;
+  font-weight: 530;
+  padding-top: 15px;
+}
+.mainwording_slide_left {
+  font-family: "Gill Sans", sans-serif;
+  letter-spacing: 1.1px;
+  font-size: 70px;
+  font-weight: 530;
+  padding-top: 15px;
+  animation: slideInLeft 1s ease-out;
+}
+.mainwording_slide_right {
+  font-family: "Gill Sans", sans-serif;
+  letter-spacing: 1.1px;
+  font-size: 70px;
+  font-weight: 530;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  animation: slideInRight 1s ease-out;
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+select {
+  width: 150px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90px;
+}
+ */
+
+.active {
+  background-color: palevioletred;
+}
+
+nav {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  height: 80px;
+  width: 90%;
+  margin: auto;
+  z-index: 1000;
+}
+
+nav .title {
+  font-size: 1.5rem;
+  margin: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+nav ul {
+  display: flex;
+  background-color: white;
+  padding: 10px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+}
+
+nav ul li a:not(.active):hover {
+  transform: translateY(-3px);
+  transition: transform 250ms;
+  color: palevioletred;
+}
+
+.icon:hover {
+  transform: translateY(-3px);
+  transition: transform 250ms;
+  color: palevioletred !important;
+}
+
+nav .menu {
+  display: none;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+}
+
+nav .menu span {
+  height: 0.4rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.2rem;
+}
+
+@media (max-width: 480px) {
+  nav .menu {
+    display: flex;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    margin: 0.2rem 0.5rem;
+  }
+}
+.nav-logo {
+  height: 30px;
+  justify-self: start;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  color: black;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 550;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  height: 100%;
+}
