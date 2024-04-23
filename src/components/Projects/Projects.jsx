@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { BsGithub } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
+import { useNavigate } from "react-router-dom";
 import Particles from "react-tsparticles";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
@@ -62,8 +63,9 @@ function Particle() {
 }
 
 const ProjectCards = (props) => {
+  const navigate = useNavigate();
   const handleDetailsClick = () => {
-    window.location.href = props.detailsLink;
+    navigate(props.detailsLink);
   };
 
   return (
