@@ -197,7 +197,7 @@ nav {
   top: 0;
   padding: 10px;
   height: 80px;
-  width: 90%;
+  width: 100%;
   margin: auto;
   z-index: 1000;
 }
@@ -244,7 +244,7 @@ nav ul li a:not(.active):hover {
 nav .menu {
   display: none;
   position: absolute;
-  top: 0.75rem;
+  top: 2rem;
   right: 0.5rem;
   flex-direction: column;
   justify-content: space-between;
@@ -317,6 +317,8 @@ nav .menu span {
   nav {
     flex-direction: column;
     align-items: flex-start;
+    padding: 10px;
+    width: 100%;
   }
 
   nav ul {
@@ -345,16 +347,4 @@ nav .menu span {
   cursor: pointer;
   display: flex;
   align-items: center;
-}
-
-.nav-links {
-  color: black;
-  font-family: "Gill Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 550;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0.3rem 0.6rem;
-  height: 100%;
 }
