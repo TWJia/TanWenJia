@@ -291,6 +291,7 @@ nav .menu span {
 }
 .nav-logo {
   height: 30px;
+  width: auto;
   justify-self: start;
   cursor: pointer;
   display: flex;
@@ -339,12 +340,21 @@ nav .menu span {
 
   nav ul li a {
     margin: 0.2rem 0.5rem;
+    font-size: 16px;
   }
-}
-.nav-logo {
-  height: 25px;
-  justify-self: start;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+  .menu {
+    top: 0.5rem; /* Adjust the top position of the menu icon */
+  }
+
+  nav {
+    padding: 5px; /* Adjust the padding of the nav element */
+  }
+  .nav-logo {
+    height: 25px;
+    justify-self: start;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
 }
