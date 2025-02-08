@@ -10,14 +10,14 @@ export default function TopPage() {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const [delta, setDelta] = useState(100 - Math.random() * 30);
   const [index, setIndex] = useState(1);
   const toRotate = [
-    "Fresh Graduate",
+    "Project Manager",
     "PMO",
     "Product Manager",
-    "Web Developer",
-    "Web Designer",
+    "Scrum Master",
+    "QA Tester",
     "UI/UX Designer",
   ];
   const period = 2000;
@@ -41,9 +41,16 @@ export default function TopPage() {
 
     setText(updatedText);
 
+    // if (isDeleting) {
+    //   setDelta((prevDelta) => prevDelta / 2);
+    // }
+
     if (isDeleting) {
-      setDelta((prevDelta) => prevDelta / 2);
+      setDelta(75);
+    } else {
+      setDelta(100); 
     }
+
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
@@ -81,22 +88,19 @@ export default function TopPage() {
                     <span
                       className="txt-rotate"
                       dataperiod="1000"
-                      data-rotate='[ "Fresh Graduate","PMO","Product Manager","Web Developer","Web Designer", "UI/UX Designer" ]'
+                      data-rotate='[ "Project Manager","PMO","Product Manager","Scrum Master","QA Tester", "UI/UX Designer" ]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
                   <p>
-                    Recent graduate with hands-on project management experience
-                    from internships and collaborative group projects. Eagerly
-                    seeking opportunities to apply academic knowledge and
-                    leverage skills gained from past job experiences. Open to
-                    roles such as Junior Project Manager, Software Developer,
-                    UI/UX Designer, Frontend Developer, or Backend Developer.
-                    Committed to contributing to strategic planning, risk
-                    management, and the successful execution of projects while
-                    being a motivated team player ready to adapt and learn
-                    quickly.
+                  Results-driven Project Manager with hands-on experience in overseeing project lifecycles, ensuring timely service delivery, 
+                  and managing client relationships. Skilled in project planning, risk management, stakeholder coordination, and financial 
+                  milestone tracking. Proven ability to lead cross-functional teams, optimize workflows, and deliver high-quality solutions 
+                  aligned with client expectations. 
+                  Experienced in handling RFI/Tenders, developing implementation plans, and facilitating User Acceptance Testing (UAT) for software projects. 
+                  Passionate about driving project success through strategic planning, effective communication, and adaptability in dynamic environments.
+                  Seeking new opportunities to contribute my expertise in project management and service delivery within a dynamic, collaborative organization.
                   </p>
                   <button
                     onClick={() =>
