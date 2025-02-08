@@ -77,17 +77,20 @@ const ProjectCards = (props) => {
           {props.description}
         </Card.Text>
         {Array.isArray(props.application) && props.application.length > 0 && (
-          <Card.Text style={{ textAlign: "justify" }}>
+          <Card.Text style={{ textAlign: "justify",color: "violet" }}>
+            <br></br>
             <strong>Application Used:</strong>
-            <br />
+            <br></br>
             {props.application.map((app, index) => (
               <span key={index}>
                 {index !== 0 && <br />}
                 {app}
               </span>
-            ))}
+            ))} 
           </Card.Text>
-        )}
+        )}            
+        <br></br>
+        <div className="button-container">
         <Button variant="primary" onClick={handleDetailsClick}>
           Details
         </Button>
@@ -111,7 +114,7 @@ const ProjectCards = (props) => {
           >
             <CgWebsite /> &nbsp; {"Demo"}
           </Button>
-        )}
+        )}</div>
       </Card.Body>
     </Card>
   );
@@ -148,7 +151,7 @@ const Projects = () => {
               description="The aim of this project is to design and develop a cinema ticket booking system based on the B-C-E framework."
               application={["ReactJS", "Java Springboot", "MongoDB"]}
               detailsLink="/projects/moviebooking"
-              // ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
+              ghLink="https://github.com/notheun/movie-booking-system.git"
               // demoLink="https://blogs.soumya-jit.tech/"
             />
           </Col>

@@ -12,6 +12,7 @@ import Form from "../../assets/Pet/Form.png";
 import Login from "../../assets/Pet/Login.png";
 import "./PetAdopt.css";
 import Footer from "../Footer";
+import ScrollToTop from "../ScrollToTop";
 
 const PetAdopt = () => {
   const [fullscreenImage, setFullscreenImage] = useState(null);
@@ -68,7 +69,7 @@ const PetAdopt = () => {
     setFullscreenImage(null);
   };
   return (
-    <div>
+    <div><ScrollToTop />
       <Navbar />
       <div className="achievements-container">
         <div className="animate__animated animate__fadeInDown">
@@ -76,6 +77,32 @@ const PetAdopt = () => {
             Pet Adoption <strong className="darkPink">Application </strong>
           </h1>
         </div>
+        <table className="table_box">
+          <tr>
+            <th>Project Summary</th>
+          </tr>
+          <tr>
+          <td>
+          •	Application used: ReactJS
+          </td>
+          </tr>
+          <tr>
+            <td>
+            •	Includes additional features such as search bar, signup and login/logout.
+            </td>
+          </tr>
+          <tr>
+            <td>
+            •	Created reusable component. 
+            </td>
+          </tr>
+          <tr>
+            <td>
+            •	Used local storage for storing data.
+            </td>
+          </tr>
+        </table>
+        <br></br>
         <ImageGallery
           items={images}
           showPlayButton={false}

@@ -7,6 +7,7 @@ import Home2 from "../../assets/GovTech/Home2.png";
 import { Chrono } from "react-chrono";
 import "animate.css";
 import Footer from "../Footer";
+import ScrollToTop from "../ScrollToTop";
 
 const Onestop = () => {
   const [fullscreenImage, setFullscreenImage] = useState(null);
@@ -55,6 +56,7 @@ const Onestop = () => {
   ];
   return (
     <div>
+       <ScrollToTop />
       <Navbar />
       <div className="achievements-container">
         <div className="animate__animated animate__fadeInDown">
@@ -62,6 +64,9 @@ const Onestop = () => {
             One Stop <strong className="darkPink">Hub</strong>
           </h1>
         </div>
+        <h5 className="project-heading">
+       Timeline
+        </h5>
         <Chrono
           items={items.map((item) => ({
             ...item,

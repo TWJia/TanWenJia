@@ -42,6 +42,7 @@ import sequence from "../../assets/TournaHub_FYP/sequence.png";
 import TestPlan from "../../assets/TournaHub_FYP/TestPlan.png";
 import TestCase from "../../assets/TournaHub_FYP/TestCase.png";
 import Footer from "../Footer";
+import ScrollToTop from "../ScrollToTop";
 
 const Tournament = () => {
   const [fullscreenImage, setFullscreenImage] = useState(null);
@@ -226,6 +227,7 @@ const Tournament = () => {
   return (
     <>
       <Navbar />
+      <ScrollToTop />
       <div className="achievements-container">
         <div className="animate__animated animate__fadeInDown">
           <h1 className="project-heading">
@@ -233,6 +235,55 @@ const Tournament = () => {
             <strong className="darkPink"> Platform </strong>
           </h1>
         </div>
+        <table className="table_box">
+          <tr>
+            <th>Key Contributions</th>
+          </tr>
+          <tr>
+            <td>
+            •	Application used: (MERN Stack) ReactJS (frontend), ExpressJS & NodeJS(backend), MongoDB (database).
+            </td>
+          </tr>
+          <tr>
+            <td>
+            •	Led a team in the development of a tournament management system, assigning tasks and ensuring project milestones were met.
+            </td>
+          </tr>
+          <tr>
+            <td>
+            •	Utilized Jira and Kanban methodologies for streamlined project management and efficient task tracking.
+            </td>
+          </tr>
+          <tr>
+            <td>
+            •	Spearheaded both backend and frontend development, showcasing expertise across the entire project spectrum.
+            </td>
+          </tr>
+          <tr>
+            <td>
+            •	Employed the MERN (MongoDB, Express.js, React, Node.js) stack to build a robust and scalable application.
+            </td>
+          </tr>
+          <tr>
+            <td>
+            •	Managed source code efficiently using GitHub, ensuring collaborative development and version control.
+            </td>
+          </tr>
+          <tr>
+            <td>
+            •	Executed the UI/UX design for the tournament management system website, ensuring an intuitive and user-friendly interface.
+            </td>
+          </tr>
+          <tr>
+            <td>
+            •	Successfully hosted the tournament management system website using Render, ensuring a reliable and scalable online presence.
+            </td>
+          </tr>
+        </table>
+        <br></br>
+        <h5 className="project-heading">
+       Timeline
+        </h5>
         <Chrono
           items={items.map((item) => ({
             ...item,
@@ -387,18 +438,27 @@ const Tournament = () => {
           <img className="responsive-img" src={UDSU} alt="UDSU" />
           <img className="responsive-img" src={UDTO} alt="UDTO" />
         </div>
+        
         <h5 className="project-heading">Use Case Description</h5>
+        <div className="centered-img-container">
         <img className="responsive-img" src={Description} alt="Description" />
+        </div>
         <h5 className="project-heading">BCE Diagram</h5>
+        <div className="centered-img-container">
         <img className="responsive-img" src={BCE} alt="BCE" />
+        </div>
         <h5 className="project-heading">Sequence Diagram</h5>
+        <div className="centered-img-container">
         <img className="responsive-img" src={sequence} alt="sequence" />
+        </div>
         <h5 className="project-heading">Test Plan</h5>
+        <div className="centered-img-container">
         <img className="responsive-img" src={TestPlan} alt="TestPlan" />
-        <img />
+        </div>
         <h5 className="project-heading">Test Case</h5>
+        <div className="centered-img-container">
         <img className="responsive-img" src={TestCase} alt="TestCase" />
-        <img />
+        </div>
       </div>
       <Footer />
     </>

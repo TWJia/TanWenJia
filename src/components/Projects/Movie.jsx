@@ -23,6 +23,7 @@ import cart from "../../assets/MovieApplication/Cart.png";
 import Rewards from "../../assets/MovieApplication/Rewards.png";
 import Review from "../../assets/MovieApplication/Review.png";
 import Footer from "../Footer";
+import ScrollToTop from "../ScrollToTop";
 
 const Movie = () => {
   const [fullscreenImage, setFullscreenImage] = useState(null);
@@ -78,11 +79,13 @@ const Movie = () => {
       description: "Review",
     },
   ];
+
   const scrollToSection = (sectionId) => {
-    console.log("TRIGGED SECTION");
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.log(`Section with id ${sectionId} not found.`);
     }
   };
 
@@ -98,17 +101,17 @@ const Movie = () => {
     return fullscreenImage === imageSrc;
   };
 
-  const handleItemSelected = (data) => {
-    if (data.title === "User Stories") {
-      scrollToSection("UserStory");
-    } else if (data.title === "Other Diagrams") {
-      scrollToSection("OtherDiagrams");
-    } else if (data.title === "Test Cases/Plan") {
-      scrollToSection("TestCasesPlan");
-    } else if (data.title === "Final Website") {
-      scrollToSection("FinalWebsite");
-    }
-  };
+  // const handleItemSelected = (data) => {
+  //   if (data.title === "User Stories") {
+  //     scrollToSection("UserStory");
+  //   } else if (data.title === "Other Diagrams") {
+  //     scrollToSection("OtherDiagrams");
+  //   } else if (data.title === "Test Cases/Plan") {
+  //     scrollToSection("TestCasesPlan");
+  //   } else if (data.title === "Final Website") {
+  //     scrollToSection("FinalWebsite");
+  //   }
+  // };
 
   const items = [
     {
@@ -116,6 +119,7 @@ const Movie = () => {
       cardTitle: "Identify actors & user stories",
       cardSubtitle: ["System Admin", "Staff", "Manager", "Customer"],
       media: { type: "IMAGE", source: { url: UserStory } },
+      sectionId: "UserStory"
     },
     {
       title: "Other Diagrams",
@@ -143,7 +147,7 @@ const Movie = () => {
   ];
 
   return (
-    <>
+    <><ScrollToTop />
       <Navbar />
       <div className="achievements-container" id="achievements-container">
         <div className="animate__animated animate__fadeInDown">
@@ -152,6 +156,35 @@ const Movie = () => {
             <strong className="darkPink">Application </strong>
           </h1>
         </div>
+        <table className="table_box">
+          <tr>
+            <th>Key Contributions</th>
+          </tr>
+          <tr>
+            <td>
+          •	Application used: ReactJS (frontend), Java Spring Boot (backend),MongoDB (database).
+          </td>
+          </tr>
+          <tr>
+            <td>
+            •	Demonstrated exceptional leadership skills by effectively leading the team through the brainstorming process and ensuring the timely completion of the project.
+            </td>
+          </tr>
+          <tr>
+            <td>
+            •	Led the end-to-end development of a comprehensive movie application, taking a primary role in designing and implementing the frontend components and ensuring an intuitive and visually appealing UI/UX for the website.
+            </td>
+          </tr>
+          <tr>
+            <td>
+            •	Used GitHub for source repository, GitLab for CI/CD and employed Taiga for efficient project management.
+            </td>
+          </tr>
+        </table>
+        <br></br>
+        <h5 className="project-heading">
+       Timeline
+        </h5>
         <Chrono
           items={items.map((item) => ({
             ...item,
@@ -163,7 +196,11 @@ const Movie = () => {
               </ul>
             ),
           }))}
-          onItemSelected={handleItemSelected}
+          // onItemSelected={handleItemSelected}
+          onItemSelected={(data) => {
+            console.log("Item selected:", data.title); 
+            scrollToSection(data.sectionId);
+          }}
           mode="HORIZONTAL"
           showAllCardsHorizontal
           fontSizes={{
@@ -178,15 +215,15 @@ const Movie = () => {
             cardTitleColor: "black",
           }}
           disableToolbar
-          onClick={(chronoItem) => {
-            if (chronoItem.title == "User Stories") {
-              scrollToSection("UserStory");
-            } else if (chronoItem.title == "Other Diagrams") {
-              scrollToSection("OtherDiagrams");
-            } else if (chronoItem.title == "Test Cases/Plan") {
-              scrollToSection("TestPlan");
-            }
-          }}
+          // onClick={(chronoItem) => {
+          //   if (chronoItem.title == "User Stories") {
+          //     scrollToSection("UserStory");
+          //   } else if (chronoItem.title == "Other Diagrams") {
+          //     scrollToSection("OtherDiagrams");
+          //   } else if (chronoItem.title == "Test Cases/Plan") {
+          //     scrollToSection("TestPlan");
+          //   }
+          // }}
         />
         <h5 className="project-heading">Final Website</h5>
         <ImageGallery
@@ -203,7 +240,7 @@ const Movie = () => {
         />
         <h5 id="UserStory" className="project-heading">
           Some User Stories Examples:
-        </h5>
+        </h5><div className="centered-img-container">
         <img
           style={{
             cursor: "pointer",
@@ -213,10 +250,10 @@ const Movie = () => {
           src={UserStory}
           alt="User Story"
           onClick={() => toggleFullscreen(UserStory)}
-        />
+        /></div>
         <h5 id="OtherDiagrams" className="project-heading">
           User Diagrams
-        </h5>
+        </h5><div className="centered-img-container">
         <img
           style={{
             cursor: "pointer",
@@ -226,8 +263,9 @@ const Movie = () => {
           src={UserDiagram}
           alt="User Diagram"
           onClick={() => toggleFullscreen(UserDiagram)}
-        />
+        /></div>
         <h5 className="project-heading">Use case Description</h5>
+        <div className="centered-img-container">
         <img
           style={{
             cursor: "pointer",
@@ -237,53 +275,58 @@ const Movie = () => {
           src={UCDescription}
           alt="UCDescription"
           onClick={() => toggleFullscreen(UCDescription)}
-        />
+        /></div>
         <h5 className="project-heading">BCE Diagram</h5>
+        <div className="centered-img-container">
         <img
           style={{
             cursor: "pointer",
-            width: isFullscreen(BCE) ? "auto" : "80%",
-            height: isFullscreen(BCE) ? "auto" : "80%",
+            width: isFullscreen(BCE) ? "100%" : "auto",
+            height: isFullscreen(BCE) ? "100%" : "auto",
           }}
           src={BCE}
           alt="BCE"
           onClick={() => toggleFullscreen(BCE)}
-        />
+        /></div>
         <h5 className="project-heading">Sequence Diagram</h5>
+        <div className="centered-img-container">
         <img
           style={{
             cursor: "pointer",
-            width: isFullscreen(sequence) ? "auto" : "80%",
-            height: isFullscreen(sequence) ? "auto" : "80%",
+            width: isFullscreen(sequence) ? "100%" : "auto",
+            height: isFullscreen(sequence) ? "100%" : "auto",
           }}
           src={sequence}
           alt="sequence"
           onClick={() => toggleFullscreen(sequence)}
-        />
-        <h5 id="TestPlan" className="project-heading">
+        /></div>
+        <h5 className="project-heading" id="TestPlan">
           Test Plan
         </h5>
+        <div className="centered-img-container">
         <img
           style={{
             cursor: "pointer",
-            width: isFullscreen(sequence) ? "auto" : "70%",
-            height: isFullscreen(sequence) ? "auto" : "70%",
+            width: isFullscreen(TestPlan) ? "100%" : "auto",
+            height: isFullscreen(TestPlan) ? "100%" : "auto",
           }}
           src={TestPlan}
           alt="TestPlan"
           onClick={() => toggleFullscreen(TestPlan)}
         />
+        </div>
         <h5 className="project-heading">Test Case</h5>
+        <div className="centered-img-container">
         <img
           style={{
             cursor: "pointer",
-            width: isFullscreen(sequence) ? "auto" : "70%",
-            height: isFullscreen(sequence) ? "auto" : "70%",
+            width: isFullscreen(Testcase) ? "100%" : "auto",
+            height: isFullscreen(Testcase) ? "100%" : "auto",
           }}
           src={Testcase}
           alt="Testcase"
           onClick={() => toggleFullscreen(Testcase)}
-        />
+        /></div>
       </div>
       <Footer />
     </>
