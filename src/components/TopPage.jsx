@@ -13,7 +13,7 @@ export default function TopPage() {
   const [delta, setDelta] = useState(100 - Math.random() * 30);
   const [index, setIndex] = useState(1);
   const toRotate = [
-    "Project Manager",
+    "IT Project Manager",
     "PMO",
     "Product Manager",
     "Scrum Master",
@@ -88,13 +88,13 @@ export default function TopPage() {
                     <span
                       className="txt-rotate"
                       dataperiod="1000"
-                      data-rotate='[ "Project Manager","PMO","Product Manager","Scrum Master","QA Tester", "UI/UX Designer" ]'
+                      data-rotate='[ "IT Project Manager","PMO","Product Manager","Scrum Master","QA Tester", "UI/UX Designer" ]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
                   <p>
-                  Results-driven Project Manager with hands-on experience in overseeing project lifecycles, ensuring timely service delivery, 
+                  Results-driven IT Project Manager with hands-on experience in overseeing project lifecycles, ensuring timely service delivery, 
                   and managing client relationships. Skilled in project planning, risk management, stakeholder coordination, and financial 
                   milestone tracking. Proven ability to lead cross-functional teams, optimize workflows, and deliver high-quality solutions 
                   aligned with client expectations. 

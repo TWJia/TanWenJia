@@ -108,8 +108,8 @@ const educationData = [
     institution: "University Of Wollongong",
     icon: HiAcademicCap,
     course: "Bachelor of Computer Science (Big Data)",
-    startYear: "2021",
-    endYear: "2024",
+    startYear: "Sept 2021",
+    endYear: "June 2024",
     details: [
       "Cumulative Average: 72.6",
       "Relevant Coursework/ Academic Achievements:",

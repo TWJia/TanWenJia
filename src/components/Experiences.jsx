@@ -5,6 +5,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import GroupIcon from '@mui/icons-material/Group';
 import WorkIcon from "@mui/icons-material/Work";
 import DesignServicesIcon from "@mui/icons-material/DesignServices";
 import ChairIcon from "@mui/icons-material/Chair";
@@ -147,6 +148,24 @@ const ExperienceCard = ({ experience }) => {
 };
 const Experiences = () => {
   const experiences = [
+    {
+      title: "IT Project Manager",
+      company_name: "BEENET Singapore Pte Ltd",
+      icon: GroupIcon,
+      iconBg: "#985ae7",
+      date: "June 2024 - Current",
+      points: [
+        "Led the completion of multiple high-priority projects, ensuring timely delivery and alignment with client requirements, achieving consistent project success and client satisfaction.",
+        "Created and implemented efficient communication plans, Gantt charts, and detailed implementation plans for RFI/Tender responses, improving the clarity and organization of project proposals.",
+        "Consistently ensured the on-time and on-budget completion of projects by effectively tracking and managing project performance, contributing to improved client satisfaction and repeat business.",
+        "Successfully developed detailed RFI/Tender proposals, leading to the company’s ability to secure competitive contracts and strengthen its reputation within the industry.",
+        "Managed ongoing post-implementation relationships with clients, ensuring high levels of satisfaction and fostering long-term partnerships through consistent follow-up and support.",
+        "Successfully tracked financial milestones and scheduling for training, custom software development, and service engagements, ensuring all projects were completed on time and within budget.",
+        "Collaborated closely with BEENET software developers to ensure User Acceptance Testing (UAT) for custom software was effectively planned, executed, and met client requirements, securing services delivery sign-offs.",
+        "Worked with technical consultants to ensure that all services engagements were delivered according to client specifications, achieving successful client outcomes.",
+        "Coordinated with BEENET trainers to ensure all training services were scheduled and delivered on time, supporting clients’ needs and increasing training satisfaction."
+      ],
+    },
     {
       title: "PMO Intern",
       company_name: "VIPSHOP Singapore Pte Ltd",
