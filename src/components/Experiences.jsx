@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 import SectionWrapper from "./SectionWrapper";
 import "./Education/Education.css";
 import ScrollToTop from "./ScrollToTop";
-// import Footer from "./Footer";
+import Footer from "./Footer";
 const textVariant = (delay) => {
   return {
     hidden: {
@@ -228,7 +228,7 @@ const Experiences = () => {
           </div>
         </div>
       </>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
