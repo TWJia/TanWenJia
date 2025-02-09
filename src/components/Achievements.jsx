@@ -7,6 +7,10 @@ const Achievements = () => {
   const items = [
     {
       title: "2024",
+      cardTitle: "TikTok Tech Immersion Program",
+    },
+    {
+      title: "2024",
       cardTitle: "HackOMania – GovTech",
       // url: "http://www.history.com",
       // cardSubtitle:
