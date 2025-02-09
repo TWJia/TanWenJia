@@ -70,6 +70,19 @@ p.danger {
 }
 
 /************ Top Page Css ************/
+.download-btn {
+  background-color: plum;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background-color: palevioletred;
+}
+
 .banner {
   margin-top: 0;
   padding: 120px 0 100px 20px;

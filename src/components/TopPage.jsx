@@ -78,7 +78,7 @@ export default function TopPage() {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <span className="tagline">Welcome to my Portfolio</span>
+                  <span className="tagline">Welcome to my Portfolio</span> 
                   <h1>
                     {`Hello! I'm Wen Jia`}{" "}
                     <span className="wave" role="img" aria-labelledby="wave">
@@ -112,6 +112,11 @@ export default function TopPage() {
                   >
                     Let’s Connect <ArrowRightCircle size={25} />
                   </button>
+                  <a href="../../public/TanWenJia2025CV.pdf" download="TanWenJia2025CV.pdf">
+                  <button className="download-btn">
+                   Download CV
+                </button>
+                  </a>
                 </div>
               )}
             </TrackVisibility>
