@@ -49,7 +49,7 @@ const Achievements = () => {
     <div className="achievements-container">
       <div className="animate__animated animate__fadeInDown">
         <h1 className="project-heading">
-        Certifications, <strong className="darkPink">Training Programs & Awards </strong>
+        Certifications, Training Programs<strong className="darkPink"> & Awards </strong>
         </h1>
       </div>
       <Chrono
