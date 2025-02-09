@@ -94,13 +94,15 @@ export default function TopPage() {
                     </span>
                   </h1>
                   <p>
-                  Results-driven IT Project Manager with hands-on experience in overseeing project lifecycles, ensuring timely service delivery, 
-                  and managing client relationships. Skilled in project planning, risk management, stakeholder coordination, and financial 
-                  milestone tracking. Proven ability to lead cross-functional teams, optimize workflows, and deliver high-quality solutions 
-                  aligned with client expectations. 
-                  Experienced in handling RFI/Tenders, developing implementation plans, and facilitating User Acceptance Testing (UAT) for software projects. 
-                  Passionate about driving project success through strategic planning, effective communication, and adaptability in dynamic environments.
-                  Seeking new opportunities to contribute my expertise in project management and service delivery within a dynamic, collaborative organization.
+                  Results-driven IT Project Manager with expertise in project lifecycles, service delivery, and client relationship management.
+                   Skilled in project planning, risk management, stakeholder coordination, and financial tracking. Adept at leading 
+                   cross-functional teams, optimizing workflows, and delivering high-quality solutions. Experienced in RFI/Tenders, 
+                   implementation planning, and User Acceptance Testing (UAT). Passionate about driving project success through strategic
+                    planning, effective communication, and adaptability. 
+                    </p>
+                    <p><br></br>
+                    Seeking opportunities to contribute expertise in project management 
+                    and service delivery within a dynamic organization.
                   </p>
                   <button
                     onClick={() =>
@@ -121,7 +123,6 @@ export default function TopPage() {
     Download CV
   </button>
 </a>
-
                 </div>
               )}
             </TrackVisibility>
