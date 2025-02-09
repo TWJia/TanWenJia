@@ -112,11 +112,16 @@ export default function TopPage() {
                   >
                     Let’s Connect <ArrowRightCircle size={25} />
                   </button>
-                  <a href="../../public/TanWenJia2025CV.pdf" download="TanWenJia2025CV.pdf">
-                  <button className="download-btn">
-                   Download CV
-                </button>
-                  </a>
+                  <a 
+  href="https://drive.google.com/uc?export=download&id=10IXofVvN7nhELJbWaY77uRxS_NfcI_cV" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <button className="download-btn">
+    Download CV
+  </button>
+</a>
+
                 </div>
               )}
             </TrackVisibility>
