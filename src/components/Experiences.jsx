@@ -153,7 +153,7 @@ const Experiences = () => {
       company_name: "BEENET Singapore Pte Ltd",
       icon: GroupIcon,
       iconBg: "#985ae7",
-      date: "June 2024 - Current",
+      date: "June 2024 - March 2025",
       points: [
         "Led the completion of multiple high-priority projects, ensuring timely delivery and alignment with client requirements, achieving consistent project success and client satisfaction.",
         "Created and implemented efficient communication plans, Gantt charts, and detailed implementation plans for RFI/Tender responses, improving the clarity and organization of project proposals.",
